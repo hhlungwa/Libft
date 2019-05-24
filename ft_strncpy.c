@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:36:37 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/05/23 15:15:01 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/05/23 15:23:26 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		main()
 	char str1[15] = "deshey world";
    	char str2[15] = "hello Deshey";	
 		
-	ft_strncpy(str2, str1, 3);
+	ft_strncpy(str2, str1, 5);
 	printf("%s\n", str2);
 	return(0);
 }
