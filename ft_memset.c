@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::
- *                                                        */
-/*   ft_memset.c                                        :+:      :+:    :+:
- *   */
-/*                                                    +:+ +:+         +:+
- *                                                    */
-/*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+
- *   */
-/*                                                +#+#+#+#+#+   +#+
- *                                                */
-/*   Created: 2019/05/20 13:08:05 by hhlungwa          #+#    #+#
- *   */
-/*   Updated: 2019/05/21 10:17:07 by hhlungwa         ###   ########.fr
- *   */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/31 10:21:39 by hhlungwa          #+#    #+#             */
+/*   Updated: 2019/05/31 10:31:25 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
-/* **************************************************************************
- * */
+/* ************************************************************************** */
 
-#include <string.h> #include <stdio.h>
 
 void		*ft_memset(void *b, int c, size_t len)
 { 
-	char *str; 
+	char *str;
+	unsigned char a;
 	size_t i;
 	
-	str = (char *) b; 
+	str = (char *) b;
+   	a = (unsigned char) c;	
 	i = 0; 
 	while(i < len) 
 	{ 
@@ -35,10 +28,3 @@ void		*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-int		main()
-{
-	char str[12] = "hello world";
-	ft_memset(str, '&', 5);
-	printf("%s\n", str);
-
-}
