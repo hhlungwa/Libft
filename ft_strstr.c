@@ -1,6 +1,14 @@
-
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/05 13:29:13 by hhlungwa          #+#    #+#             */
+/*   Updated: 2019/06/05 13:29:24 by hhlungwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *needle)
 {
@@ -16,24 +24,11 @@ char	*ft_strstr(char *str, char *needle)
 		{
 			if (needle[j + 1] == '\0')
 			{
-			return(str + i);
+			return(&str[i]);
 			}
 			j++;
 		}
 		i++;
 	}
 	return(0);
-}
-
-
-int	main()
-{
-	char str1[50] = "Helloworldyougotthis";
-	char str2[15] = "got";
-	char *ret;
-
-	ret = ft_strstr(str1, str2);
-	printf("%s", ret);
-	return(0);
-
 }
