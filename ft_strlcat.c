@@ -6,17 +6,18 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 10:31:08 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/05/28 13:25:48 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:16:30 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-size_t		ft_strlcat(char *s1, char *s2, size_t len)
+size_t		ft_strlcat(char *restrict s1, const char *restrict s2, size_t size)
 {
 	size_t i;
 	size_t j;
+	size_t len;
 
 	i = 0;
 	j = 0;
@@ -24,14 +25,16 @@ size_t		ft_strlcat(char *s1, char *s2, size_t len)
 		i++;
 	while(s2[j])
 		j++;
-
-	while(s1[j] && i + j < len)
+	len = i + j;
+	j = 0;
+	while (s2[j] && i <= (size - strlen(s1) - 1))
 	{
-		s1[i + j] = s2[i];
+		s1[i] = s2[j];
 		j++;
 		i++;
 	}
-	return(i + j);
+	s1[i] = '\0';
+	return(len);
 }
 
 int		main()
@@ -41,7 +44,7 @@ int		main()
 	size_t ret;
 
 	ret = ft_strlcat(str, str1, sizeof(str));
-	printf("%zu", ret);
+	printf("%zu.. %s", ret, str);
 	return(0);
 
 }

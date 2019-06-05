@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 08:57:45 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/05/27 10:34:28 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:00:58 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ char		*ft_strnstr(char *str, char *needle, size_t len)
 
 int main()
 {
-	char str1[20] = "helloworldamdeshey";
-	char str2[20] = "llowor";
+	char str1[30] = "hello i am super man";
+	char str2[10] = "";
 	char *ret;
    	
-	ret = ft_strnstr(str1, str2, 9);
+	ret = strnstr(str1, str2, 20);
 	printf("%s", ret);	
 
 
