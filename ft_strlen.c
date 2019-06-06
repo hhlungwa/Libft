@@ -6,11 +6,11 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:53:15 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/04 13:47:41 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:17:51 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *s)
+size_t		ft_strlen(const char *s)
 {
 	size_t i;
 
