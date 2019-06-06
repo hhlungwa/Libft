@@ -6,11 +6,11 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:35:10 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/04 13:01:14 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:16:55 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {	
 	char *str1;
 	char *str2;
