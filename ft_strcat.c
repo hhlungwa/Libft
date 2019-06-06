@@ -6,11 +6,11 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:02:00 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/04 16:19:00 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:19:19 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *restrict s1, char *restrict s2)
+char	*ft_strcat(char *s1, char *s2)
 {
 		int i;
 		int j;
