@@ -1,41 +1,37 @@
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/06 12:52:13 by hhlungwa          #+#    #+#             */
+/*   Updated: 2019/06/06 12:55:45 by hhlungwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
-	int i;
-	int sign;
-	int nbr;
+	int	i;
+	int	sign;
+	int	nbr;
 
 	i = 0;
 	sign = 1;
 	nbr = 0;
-	while(str[i])
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
 	{
 		i++;
-
-		if(str[i] >= 32 && str[i] <= 47)
-		{
-			sign = -1;
-		}
-		while(str[i] >= '0' && str[i] <= '9')
-		{
-			nbr = (nbr * 10) + (str[i] - '0');
-			i++;
-		}
-		return(nbr * sign);
-	}	
-	return(0); 
+		sign *= -1;
+	}
+	if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nbr = (nbr * 10) + (str[i] - '0');
+		i++;
+	}
+	return (nbr * sign);
 }
-
-int	main()
-{
-	char str[15] = "-123";
-	int ret;
-
-	ret = ft_atoi(str);
-	printf("%s", str);
-	return(0);
-}
-
