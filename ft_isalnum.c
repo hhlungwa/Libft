@@ -6,12 +6,9 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:47:12 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/05/27 14:01:34 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/06 11:24:52 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <ctype.h>
-#include <stdio.h>
 
 int		ft_isalnum(int c)
 {
@@ -21,12 +18,3 @@ int		ft_isalnum(int c)
 		return(0);
 }
 
-int		main(void)
-{
-	int str = 'a';
-	int ret;
-
-	ret = ft_isalnum(str);
-	printf("%d", ret);
-	return(0);
-}
