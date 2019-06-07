@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 13:39:08 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/03 14:38:06 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/07 15:05:18 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ int		main()
 {
 	char *str1;
 
-	str1 = (char *) ft_strnew(5);
-	printf("my strnew %s",str1);
+	str1 = ft_strnew(5);
+	str1 = "Deshey";
+	printf("my strnew %c",*str1);
    	return(0);	
 }
 
