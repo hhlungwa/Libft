@@ -6,13 +6,15 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 08:57:45 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/06 14:09:36 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/14 09:23:13 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char		*ft_strnstr(char *str, char *needle, size_t len)
 {
-	int	j;
+	size_t	j;
 	size_t	i;
 
 	i = 0;

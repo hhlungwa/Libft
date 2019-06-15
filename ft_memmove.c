@@ -6,25 +6,36 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:04:36 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/07 14:05:17 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/14 09:03:21 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
+
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	char *str1;
-	char *str2;
-	size_t i;
+	unsigned int	i;
+	char			*str1;
+	char			*str2;
 
-	str1 = (char *) dest;
-	str2 = (char *) src;
+	str1 = (char *)dest;
+	str2 = (char *)src;
 	i = 0;
-
-	while(i < len)
+	if (src < dest)
 	{
-		str1[i] = str2[i];
-		i++;
-	}	
-	return (str1);
+		i = len;
+		while (i-- > 0)
+			str1[i] = str2[i];
+	}
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			str1[i] = str2[i];
+			i++;
+		}
+	}
+	return (dest);
 }
-

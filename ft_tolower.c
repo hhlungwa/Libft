@@ -6,14 +6,14 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:51:08 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/06 11:46:16 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/14 11:43:29 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_tolower(int c)
 {
-	if(c >= 'A' && c <= 'Z')
-		returni	(c + 32);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
 	else
-		returni	(c);
+		return (c);
 }

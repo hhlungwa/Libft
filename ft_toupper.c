@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:30:23 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/06 11:42:45 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/14 13:12:15 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@ int		ft_toupper(int c)
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
-		returni (c);
+		return (c);
 }
