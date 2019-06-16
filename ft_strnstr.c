@@ -18,11 +18,13 @@ char		*ft_strnstr(char *str, char *needle, size_t len)
 	size_t	i;
 
 	i = 0;
-	while (i < len)
+	if (needle[0] == '\0')
+		return (&*str);
+	while (str[i] != '\0' && i < len)
 	{
 	
 		j = 0;
-		while (needle[j] == str[i + j])
+		while (needle[j] == str[i + j] && i + j < len)
 		{
 			if (needle[j + 1] == '\0')
 			{

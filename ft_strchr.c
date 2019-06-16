@@ -14,14 +14,20 @@
 
 char		*ft_strchr(char *s, int c)
 {
-	char	a;
-	int		i;
+	int	a;
+	int	i;
 
 	i = 0;
-	a = (int)c;
-	while (s[i])
+	a = (char)c;
+	if (c == '\0')
 	{
-		if (s[i] == c)
+		while(*s)
+			s++;
+		return(&*s);
+	}
+	while (s[i] != '\0')
+	{
+		if (s[i] == a)
 		{
 			return (s + i);
 		}

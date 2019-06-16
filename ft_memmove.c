@@ -22,6 +22,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	str1 = (char *)dest;
 	str2 = (char *)src;
 	i = 0;
+	if(!str1 && str2 == NULL)
+		return(NULL);
 	if (src < dest)
 	{
 		i = len;

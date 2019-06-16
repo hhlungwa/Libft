@@ -16,6 +16,8 @@ char	*ft_strstr(char *str, char *needle)
 	int j;
 
 	i = 0;
+	if (needle[0] == '\0')
+		return (str);
 	while(str[i])
 	{
 
