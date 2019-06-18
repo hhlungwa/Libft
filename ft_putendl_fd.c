@@ -6,16 +6,18 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 15:00:16 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/11 15:18:43 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/18 15:28:29 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putendl_fd(char const *s, int fd)
 {
 	int i;
 
 	i = 0;
-	while([s[i])
-		write(fd, &s[i++], 1)
+	while (s[i])
+		write(fd, &s[i++], 1);
 	write(fd, "\n", 1);
 }

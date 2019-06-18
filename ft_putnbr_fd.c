@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 10:23:11 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/18 11:08:32 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/18 15:31:39 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ void    ft_putnbr(int n)
 {
     char c;
 
-    if	(n == "2147483648")
+    if (n == "2147483648")
     {
         write(fd, "2147483648", 11);
-        return;
+        return ;
     }
-    if	(n < 0)
+    if (n < 0)
     {
         n = -n;
         ft_putchar(fd, '-', 1);
     }
-    if	(n > 10)
+    if (n > 10)
     {
         c = n + '0';
         ft_putchar(fd, &c, 1);

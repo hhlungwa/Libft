@@ -6,14 +6,14 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:33:59 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/11 14:39:19 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/18 15:20:10 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr(char c, int fd)
 {
-	write(fd, &c, 1);
-	return;
+	ft_putchar(fd, &c, 1);
+	return ;
 }

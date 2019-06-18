@@ -6,15 +6,17 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:42:28 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/11 14:47:51 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/18 15:22:24 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
 	int i;
 
 	i = 0;
-	while(s[i])
-		write(fd, &s[i++], 1);
+	while (s[i])
+		ft_putchar(fd, &s[i++], 1);
 }
