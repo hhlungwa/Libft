@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:16:13 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/17 12:31:20 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/17 14:24:30 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 				break;
 				return(str1);
 			}
-			i++; 
+			i++;
 	}
-	return (NULL);
-}	
+	return(0);
+}

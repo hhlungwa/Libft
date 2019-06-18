@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 10:31:08 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/17 14:32:01 by hhlungwa         ###   ########.fr       */
+/*   Created: 2019/06/18 09:30:53 by hhlungwa          #+#    #+#             */
+/*   Updated: 2019/06/18 10:22:37 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t		ft_strlcat(char *s1, const char *s2, size_t size)
+char		*ft_strsub(char const *s, unsigned int start, size_t len)
 {
+	char	*str;
 	size_t	i;
-	size_t	j;
-	size_t	len;
 
+	str = (char *) malloc(sizeof(char) * len + 1);
 	i = 0;
-	j = 0;
-	while (s1[i])
-		i++;
-	while (s2[j])
-		j++;
-	len = i + j;
-	while (s2[j] && i <= (size - ft_strlen(s1) - 1))
+	if (*s || start == NULL)
+		return (NULL);
+	if (str == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		s1[i] = s2[j];
-		j++;
+		str[i] = start[i + len];
+		start++;
 		i++;
 	}
-	return (len);
+	str[i] = '\0';
+	returni (str);
 }

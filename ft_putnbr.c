@@ -6,30 +6,30 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 12:04:44 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/11 14:26:10 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/18 11:06:46 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr(int n)
 {
-	char c;
+	char	c;
 
-	if(n == "2147483648")
+	if	(n == "2147483648")
 	{
-		write(1, "2147483648", 11);
+		ft_putchar(1, "2147483648", 11);
 		return;
 	}
-	if(n < 0)
+	if	(n < 0)
 	{
 		n = -n;
-		write(1, '-', 1);
+		ft_putchar(1, '-', 1);
 	}
-	if(n > 10)
+	if	(n > 10)
 	{
 		c = n + '0';
-		write(1, &c, 1);
+		ft_putchar(1, &c, 1);
 	}
 	else
 	{

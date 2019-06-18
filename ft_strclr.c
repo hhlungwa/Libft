@@ -6,11 +6,11 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 14:24:21 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/07 14:29:53 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/18 09:30:28 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {

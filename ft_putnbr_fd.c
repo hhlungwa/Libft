@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 10:31:08 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/17 14:32:01 by hhlungwa         ###   ########.fr       */
+/*   Created: 2019/06/18 10:23:11 by hhlungwa          #+#    #+#             */
+/*   Updated: 2019/06/18 11:08:32 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft"
 
-size_t		ft_strlcat(char *s1, const char *s2, size_t size)
+void    ft_putnbr(int n)
 {
-	size_t	i;
-	size_t	j;
-	size_t	len;
+    char c;
 
-	i = 0;
-	j = 0;
-	while (s1[i])
-		i++;
-	while (s2[j])
-		j++;
-	len = i + j;
-	while (s2[j] && i <= (size - ft_strlen(s1) - 1))
-	{
-		s1[i] = s2[j];
-		j++;
-		i++;
-	}
-	return (len);
+    if	(n == "2147483648")
+    {
+        write(fd, "2147483648", 11);
+        return;
+    }
+    if	(n < 0)
+    {
+        n = -n;
+        ft_putchar(fd, '-', 1);
+    }
+    if	(n > 10)
+    {
+        c = n + '0';
+        ft_putchar(fd, &c, 1);
+    }
+    else
+    {
+        ft_putnbr(n / 10, fd);
+        ft_putnbr(n % 10, fd);
+    }
 }
