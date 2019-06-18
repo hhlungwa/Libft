@@ -6,16 +6,14 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 14:30:48 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/14 13:56:05 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/18 12:00:31 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
-# include <stdio.h>
 # include <unistd.h>
-# include <ctype.h>
 # include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n);
@@ -31,6 +29,20 @@ void	ft_putstr(char const *s);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_striter(char *s, void (*f)(char *));
 void	*ft_memalloc(size_t size);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 int		ft_atoi(char *str);
 int		ft_isalnum(int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -42,8 +54,17 @@ int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+int		ft_strequ(char const *s1, char const *s2);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strtrim(char const *s);
+char	*ft_itoa(int n);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char 	*ft_strnew(size_t size);
 char	*ft_strnew(size_t size);
 char	*ft_strcat(char *restrict s1, char *restrict s2);
 char	*ft_strchr(char *s, int c);
