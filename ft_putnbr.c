@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 12:04:44 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/18 15:19:13 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/19 15:18:45 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,20 @@
 
 void	ft_putnbr(int n)
 {
-	char	c;
-
 	if (n == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return ;
 	}
 	if (n < 0)
 	{
-		n = -n;
 		ft_putchar('-');
+		n *= -1;
 	}
-	if (n > 10)
-	{
-		c = n + '0';
-		write(1, &c, 1);
-	}
-	else
+	if (n >= 10)
 	{
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);
 	}
+	else
+		ft_putchar(n + '0');
 }

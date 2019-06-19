@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 13:22:32 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/18 15:05:06 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/19 14:44:29 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		i;
 
-	i = ft_intlen(n);
-	str = (char *)malloc(sizeof(char) * i + 1);
+	i = 0;
+	str = (char *)malloc(sizeof(char) * ft_intlen(n) + 1);
 	if (str == NULL)
 		return (NULL);
 	if (n == -2147483648)

@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 15:00:16 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/18 15:28:29 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/19 15:23:41 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_putendl_fd(char const *s, int fd)
 	int i;
 
 	i = 0;
+	if (s)
 	while (s[i])
 		write(fd, &s[i++], 1);
 	write(fd, "\n", 1);
