@@ -10,30 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
-void    ft_putnbr(int n)
+void	ft_putnbr_fd(int n, int fd)
 {
-    char c;
+    int c;
 
-    if (n == "2147483648")
+    if (n == -2147483648)
     {
-        write(fd, "2147483648", 11);
+        write(fd, "-2147483648", 11);
         return ;
     }
     if (n < 0)
     {
         n = -n;
-        ft_putchar(fd, '-', 1);
+        write(fd, "-", 1);
     }
     if (n > 10)
     {
         c = n + '0';
-        ft_putchar(fd, &c, 1);
+        write(fd, &c, 1);
     }
     else
     {
-        ft_putnbr(n / 10, fd);
-        ft_putnbr(n % 10, fd);
+        ft_putnbr_fd(n / 10, fd);
+        ft_putnbr_fd(n % 10, fd);
     }
 }

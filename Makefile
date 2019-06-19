@@ -45,7 +45,7 @@ ft_strequ.c\
 ft_strnequ.c\
 ft_strsub.c\
 ft_strjoin.c\
-ft_strtrim.c
+ft_strtrim.c\
 ft_itoa.c\
 ft_putchar.c\
 ft_putstr.c\

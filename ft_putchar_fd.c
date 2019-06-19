@@ -12,8 +12,8 @@
 
 #include "libft.h"
 
-void	ft_putnbr(char c, int fd)
+void	ft_putnbr_fd(char c, int fd)
 {
-	ft_putchar(fd, &c, 1);
+	write(fd, &c, 1);
 	return ;
 }
