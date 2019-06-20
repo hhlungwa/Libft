@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 09:25:20 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/19 14:41:05 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/20 10:41:50 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 char	*ft_strtrim(char const *s)
 {
 	int		i;
-	int		j;
 	char	*str;
 
 	if (!s)
 		return(NULL);
-	j = ft_strlen(s) - 1;
-	str = (char *)malloc(sizeof(*s) * j + 1);
+	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!str)
 		return(NULL);
 	i = 0;
