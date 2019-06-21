@@ -5,28 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 09:02:00 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/06 14:19:19 by hhlungwa         ###   ########.fr       */
+/*   Created: 2019/06/21 13:35:42 by hhlungwa          #+#    #+#             */
+/*   Updated: 2019/06/21 14:04:34 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strcat(char *s1, char *s2)
 {
-		int i;
-		int j;
+	int	i;
+	int	j;
 
-		i = 0;
-		while (s1[i])
-
-			i++;
-		j = 0;
-
-		while (s2[j])
-		{
-			s1[i] = s2[j];
-			j++;
-			i++;	
-		}
-		s1[i] = '\0';
-		return (s1);
+	i = 0;
+	while (s2[i])
+		i++;
+	j = 0;
+	while (s2[j])
+	{
+		s1[i] = s2[i];
+		j++;
+		i++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }

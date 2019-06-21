@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 15:02:11 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/19 15:33:00 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/21 15:12:26 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_strequ(char const *s1, char const *s2)
 			return (0);
 		while (s1[i] && s2[i])
 			if (s1[i] != s2[i])
-			{	
+			{
 				i++;
 				return (0);
 			}

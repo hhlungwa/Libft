@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 08:57:45 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/14 09:23:13 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/21 14:16:22 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ char		*ft_strnstr(char *str, char *needle, size_t len)
 		return (&*str);
 	while (str[i] != '\0' && i < len)
 	{
-	
 		j = 0;
 		while (needle[j] == str[i + j] && i + j < len)
 		{

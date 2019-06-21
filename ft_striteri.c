@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 15:09:32 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/19 13:47:23 by hhlungwa         ###   ########.fr       */
+/*   Created: 2019/06/21 15:06:25 by hhlungwa          #+#    #+#             */
+/*   Updated: 2019/06/21 15:06:33 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void			ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int i;
 

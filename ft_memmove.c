@@ -6,14 +6,13 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:04:36 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/14 09:03:21 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/21 13:03:06 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void				*ft_memmove(void *dest, const void *src, size_t len)
 {
 	unsigned int	i;
 	char			*str1;
@@ -22,8 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	str1 = (char *)dest;
 	str2 = (char *)src;
 	i = 0;
-	if(!str1 && str2 == NULL)
-		return(NULL);
+	if (!str1 && str2 == NULL)
+		return (NULL);
 	if (src < dest)
 	{
 		i = len;

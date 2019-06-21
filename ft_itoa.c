@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 13:22:32 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/20 10:27:00 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/21 10:47:34 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 int		ft_intlen(int n)
 {
 	int len;
-
+	
+	if (n == 0)
+		return (1);
 	len = 0;
 	if (n < 0)
 	{
-		n *= -1;
 		len++;
 	}
 	while (n)
@@ -36,18 +37,17 @@ char	*ft_itoa(int n)
 	int		i;
 
 	i = 0;
-	str = (char *)malloc(sizeof(char) * ft_intlen(n) + 1);
-	if (str == NULL)
+	if (!(str = (char *)malloc(sizeof(char) * ft_intlen(n) + 1)))
 		return (NULL);
 	if (n == -2147483648)
 		ft_strcpy(str, "-2147483648");
-	str[i--] = '\0';
-	if (n < 0)
+	str[ft_intlen(n)] = '\0';
+	if (n <= 0)
 	{
 		str[0] = '-';
-		n *= -1;
+		i = 1;
 	}
-	while (n)
+	while (n >= 10)
 	{
 		str[i] = (n % 10) + '0';
 		n /= 10;

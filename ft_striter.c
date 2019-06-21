@@ -6,15 +6,15 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 15:39:50 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/19 13:34:15 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/21 14:57:20 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
-{	
-	if(s && f)
+{
+	if (s && f)
 		while (*s)
 			f(s++);
 }

@@ -6,15 +6,17 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:47:12 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/17 11:22:53 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/21 14:29:11 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return(1);
+	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') ||
+			(c >= 'A' && c <= 'Z'))
+		return (1);
 	else
-		return(0);
+		return (0);
 }
-

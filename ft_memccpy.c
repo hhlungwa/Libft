@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:16:13 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/19 15:41:05 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/21 11:41:32 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-			str1[i] = str2[i];
-			if (str2[i] == a)
-			{	
-				return(&str1[i + 1]);
-			}
-			i++;
+		str1[i] = str2[i];
+		if (str2[i] == a)
+		{
+			return (&str1[i + 1]);
+		}
+		i++;
 	}
-	return(0);
+	return (0);
 }
