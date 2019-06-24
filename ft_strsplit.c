@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 16:50:33 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/24 17:42:13 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/24 17:51:43 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char		**ft_strsplit(char const *s, char c)
 			i++;
 		if (i > j)
 		{
-			tab[k] = ft_strsub(s + j, i - j);
+			tab[k] = ft_strsub(s + j, i - j, 10);
 			k++;
 		}
 	}
