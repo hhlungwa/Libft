@@ -6,16 +6,16 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 13:22:32 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/21 10:47:34 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:17:46 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_intlen(int n)
+int			ft_intlen(int n)
 {
 	int len;
-	
+
 	len = 0;
 	if (n == 0)
 		len++;
@@ -32,10 +32,10 @@ int		ft_intlen(int n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
-	int	len;
+	int		len;
 
 	len = ft_intlen(n);
 	if (!(str = (char *)malloc(sizeof(char) * len + 1)))

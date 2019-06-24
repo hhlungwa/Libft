@@ -54,13 +54,15 @@ ft_putnbr.c\
 ft_putchar_fd.c\
 ft_putstr_fd.c\
 ft_putendl_fd.c\
-ft_putnbr_fd.c
+ft_putnbr_fd.c\
+ft_strsplit.c
 
 OBJ = $(SRC:%.c=%.o)
 
-all: build_lib
+all: $(NAME)
 
-build_lib: create_obj
+$(NAME):
+	$(CC) $(FLAGS) -c $(SRC)
 	ar -rc $(NAME) $(OBJ) libft.h
 	ranlib $(NAME)
 

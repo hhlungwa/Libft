@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 14:30:48 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/18 12:00:31 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/24 17:39:45 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*ft_itoa(int n);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char 	*ft_strnew(size_t size);
+char	*ft_strnew(size_t size);
 char	*ft_strnew(size_t size);
 char	*ft_strcat(char *restrict s1, char *restrict s2);
 char	*ft_strchr(char *s, int c);
@@ -76,6 +76,7 @@ char	*ft_strmap(const char *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnew(size_t size);
 char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
 size_t	ft_strlcat(char *s1, const char *s2, size_t size);
 size_t	ft_strlen(const char *s);
 
