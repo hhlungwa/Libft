@@ -16,11 +16,12 @@ int		ft_intlen(int n)
 {
 	int len;
 	
-	if (n == 0)
-		return (1);
 	len = 0;
+	if (n == 0)
+		len++;
 	if (n < 0)
 	{
+		n *= -1;
 		len++;
 	}
 	while (n)
@@ -34,24 +35,26 @@ int		ft_intlen(int n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		i;
+	int	len;
 
-	i = 0;
-	if (!(str = (char *)malloc(sizeof(char) * ft_intlen(n) + 1)))
+	len = ft_intlen(n);
+	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	if (n == -2147483648)
 		ft_strcpy(str, "-2147483648");
-	str[ft_intlen(n)] = '\0';
-	if (n <= 0)
+	str[len] = '\0';
+	if (n == 0)
+		str[0] = '0';
+	if (n < 0)
 	{
 		str[0] = '-';
-		i = 1;
+		n *= -1;
 	}
-	while (n >= 10)
+	while (n > 0)
 	{
-		str[i] = (n % 10) + '0';
+		str[len - 1] = (n % 10) + '0';
 		n /= 10;
-		i--;
+		len--;
 	}
 	return (str);
 }
