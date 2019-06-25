@@ -6,56 +6,73 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 16:50:33 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/24 17:51:43 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/25 14:22:02 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_count(char const *s, char c)
+static int		ft_word(const char *s, char c)
 {
-	unsigned int 	i;
-	int				counter;
-	
+	int			i;
+	int			len;
+
 	i = 0;
-	counter = 0;
+	len = 0;
+	while (s[i] == c)
+		i++;
+	while (s[i] != c && s[i] != '\0')
+	{
+		i++;
+		len++;
+	}
+	return (len);
+}
+
+static int		counter(const char *s, char c)
+{
+	int			i;
+	int			count;
+
+	i = 0;
+	count = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
-		if (s[i] != '\0')
-			counter++;
-		while (s[i] && (s[i] != c))
+		if (s[i] != c && s[i])
+			count++;
+		while (s[i] != c && s[i])
 			i++;
 	}
-	return (counter);
+	return (count);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		k;
-	char	**tab;
+	char		**str;
+	int			i;
+	int			j;
+	int			k;
 
-	i = 0;
-	k = 0;
-	tab = (char **)malloc(sizeof(char *) * (ft_count(s, c)) + 1);
-	if (tab == NULL)
+	if (!s)
 		return (NULL);
-	while(s[i])
+	str = (char **)malloc((sizeof(*str) * counter(s, c)) + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = -1;
+	while (++j < counter(s, c))
 	{
+		k = 0;
+		if (!(str[j] = (char *)malloc(sizeof(char) * ft_word(&s[i], c) + 1)))
+			str[j] = NULL;
 		while (s[i] == c)
 			i++;
-		j = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > j)
-		{
-			tab[k] = ft_strsub(s + j, i - j, 10);
-			k++;
-		}
+		while (s[i] != c && s[i])
+			str[j][k++] = s[i++];
+		str[j][k] = '\0';
 	}
-	tab[k] = NULL;
-	return (tab);
+	str[j] = NULL;
+	return (str);
 }
