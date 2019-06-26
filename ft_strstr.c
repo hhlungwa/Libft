@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 13:29:13 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/26 09:43:04 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/26 11:09:09 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strstr(const char *str, const char *needle)
 
 	i = 0;
 	if (needle[0] == '\0')
-		return (str);
+		return ((char *)str);
 	while (str[i])
 	{
 		j = 0;
@@ -27,7 +27,7 @@ char	*ft_strstr(const char *str, const char *needle)
 		{
 			if (needle[j + 1] == '\0')
 			{
-				return (&str[i]);
+				return ((char *)str + i);
 			}
 			j++;
 		}
