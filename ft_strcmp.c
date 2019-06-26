@@ -6,11 +6,11 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:54:13 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/21 14:18:29 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/26 09:40:50 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	int i;
 
