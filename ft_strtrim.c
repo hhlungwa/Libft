@@ -6,7 +6,7 @@
 /*   By: hhlungwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 09:25:20 by hhlungwa          #+#    #+#             */
-/*   Updated: 2019/06/24 10:33:31 by hhlungwa         ###   ########.fr       */
+/*   Updated: 2019/06/27 14:24:08 by hhlungwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,22 @@ char		*ft_strtrim(const char *s)
 	int		j;
 	char	*str;
 
-	i = 0;
-	k = 0;
 	if (!s)
 		return (NULL);
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		i++;
-	if (s[i] == '\0')
-		return (malloc(sizeof(char) * 2));
+	i = 0;
 	j = ft_strlen(s) - 1;
-	while (s[j] == ' ' || s[j] == '\t' || s[j] == '\n')
+	while (s[i] && (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
+		i++;
+	while (j >= 0 && (s[j] == ' ' || s[j] == '\t' || s[j] == '\n'))
 		j--;
+	if (j < i)
+		j = i - 1;
 	if (!(str = (char*)malloc(sizeof(char) * (j - i + 2))))
 		return (NULL);
-	while (k < j - i + 1)
+	k = 0;
+	while (i <= j)
 	{
-		str[k] = s[i + k];
-		k++;
+		str[k++] = s[i++];
 	}
 	str[k] = '\0';
 	return (str);
